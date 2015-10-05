@@ -67,25 +67,20 @@ h1 {font-family:微軟正黑體,Courier New,Comic Sams MS;}
                         </td>
                     </tr>
                     <tr>
-                        <th>生日<a ng-show="isEditing" href="/modify_birthday" class="ng-hide">(打錯生日？)</a></th>
+                        <th>生日</th>
                         <td>
                             <span class="ng-binding">10/02</span>
                         </td>
                     </tr>
+                    
                     <tr>
-                        <th>學校信箱</th>
-                        <td>
-                            <span class="ng-binding">e24021022@mail.ncku.edu.tw</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>就讀學校<a ng-show="isEditing" href="/modify_school" class="ng-hide">(轉學？)</a></th>
+                        <th>就讀學校</th>
                         <td>
                             <span class="ng-binding">成功大學</span>
                         </td>
                     </tr>
                     <tr>
-                        <th>就讀系所<a ng-show="isEditing" href="/modify_department" class="ng-hide">(轉系、打錯系級？)</a></th>
+                        <th>就讀系所</th>
                         <td>
                             <span class="ng-binding">電機工程學系</span>
                         </td>
@@ -94,17 +89,6 @@ h1 {font-family:微軟正黑體,Courier New,Comic Sams MS;}
                         <th>年級</th>
                         <td>
                             <span ng-hide="isEditing" class="ng-binding">3</span>
-                            <select ng-show="isEditing" name="grade" ng-model="me.grade" class="ng-pristine ng-untouched ng-valid ng-hide">
-                                <option value="不顯示">不顯示</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="畢業">畢業</option>
-                            </select>
                         </td>
                     </tr>
                     
@@ -112,62 +96,49 @@ h1 {font-family:微軟正黑體,Courier New,Comic Sams MS;}
                         <th>感情狀態</th>
                         <td>
                             <span ng-hide="isEditing" class="ng-binding">不顯示</span>
-                            <select ng-show="isEditing" name="affection" ng-model="me.affection" class="ng-pristine ng-untouched ng-valid ng-hide">
-                                <option value="不顯示">不顯示</option>
-                                <option value="單身">單身</option>
-                                <option value="一言難盡">一言難盡</option>
-                                <option value="穩定交往">穩定交往</option>
-                            </select>
                         </td>
                     </tr>
                     <tr>
                         <th>專長、興趣</th>
                         <td>
                             <p ng-hide="isEditing" ng-bind-html="me.talent | noHTML | newlines | noHTMLfinal" class="ng-binding">喜歡打球，喜歡看電影，喜歡聽歌，喜歡五月天，喜歡跟朋友一群一起去吃宵夜，想要認識更多的人，喜歡跟他們聊天<br>看很多的電影，也看很綜藝節目，連續劇也不少，韓劇日劇歐美劇台劇什麼都看，感覺就是一個很閒的人。</p>
-                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-hide" ng-show="isEditing" ng-model="me.talent" type="text"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <th>曾參加過的社團</th>
                         <td>
                             <p ng-hide="isEditing" ng-bind-html="me.club | noHTML | newlines | noHTMLfinal" class="ng-binding">這學期想加流唱社又想去廚藝社<br>現在又接了系隊的隊長，又考慮打校隊，怕忙不過來。</p>
-                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-hide" ng-show="isEditing" ng-model="me.club" type="text"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <th>喜歡的課</th>
                         <td>
                             <p ng-hide="isEditing" ng-bind-html="me.lecture | noHTML | newlines | noHTMLfinal" class="ng-binding"></p>
-                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-hide" ng-show="isEditing" ng-model="me.lecture" type="text"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <th>喜歡的國家</th>
                         <td>
                             <p ng-hide="isEditing" ng-bind-html="me.lovedcountry | noHTML | newlines | noHTMLfinal" class="ng-binding">以後想到美國去念書。還有在版上看到好多英國的照片，突然有種想在英國的街道散步的感覺。尤其是想去貝克街221B!!!!!!</p>
-                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-hide" ng-show="isEditing" ng-model="me.lovedcountry" type="text"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <th>自己最近的困擾</th>
                         <td>
                             <p ng-hide="isEditing" ng-bind-html="me.trouble | noHTML | newlines | noHTMLfinal" class="ng-binding">對於比賽隊員的安排有超級大的煩惱，誰可以幫我解決?????<br>最近一直掉跟錢有關的東西，真的不是想跟錢過不去....借台腳踏車也會忘了拿回卡片0.0</p>
-                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-hide" ng-show="isEditing" ng-model="me.trouble" type="text"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <th>可以交換學習的才藝</th>
                         <td>
                             <p ng-hide="isEditing" ng-bind-html="me.exchange | noHTML | newlines | noHTMLfinal" class="ng-binding">最近常去誠品看了很多書好像可以交流一下!!!!</p>
-                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-hide" ng-show="isEditing" ng-model="me.exchange" type="text"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <th>想嘗試的事情</th>
                         <td>
                             <p ng-hide="isEditing" ng-bind-html="me.wanttotry | noHTML | newlines | noHTMLfinal" class="ng-binding">去國外讀書，自己賺學費自己解決生活費</p>
-                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-hide" ng-show="isEditing" ng-model="me.wanttotry" type="text"></textarea>
-                        </td>
+                         </td>
                     </tr>
                 </tbody>
             </table>
